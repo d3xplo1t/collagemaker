@@ -2,7 +2,10 @@
 from PIL import Image
 
 # Load the image
-image = Image.open("image.jpg")
+image = Image.open("strawberry.png")
+
+# Resize the image to a specific width and height
+image = image.resize((400, 400))
 
 # Create a new image that is the size of an A4 sheet
 a4_sheet = Image.new('RGBA', (2480, 3508), color=(0, 0, 0, 0))
