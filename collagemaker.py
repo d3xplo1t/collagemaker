@@ -12,7 +12,7 @@ a4_sheet = Image.new('RGBA', (2480, 3508), color=(0, 0, 0, 0))
 
 # Set the number of rows and columns on the A4 sheet
 rows = 8
-cols = 5
+cols = 4
 
 # Calculate the width and height of each image
 image_width = a4_sheet.width // cols
@@ -26,7 +26,7 @@ for i in range(rows):
         y = i * image_height
 
         # Paste the image at the current position
-        a4_sheet.paste(image, (x, y))
+        a4_sheet.paste(image, (x + 100, y))
 
 # Save the resulting image to a file
 a4_sheet.save("a4_sheet.png")
